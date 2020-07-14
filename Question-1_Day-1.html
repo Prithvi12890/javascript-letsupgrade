@@ -1,0 +1,272 @@
+<!-- 1. Explore and explain various methods in console function -->
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Javascript | Console Methods</title>
+</head>
+<body>
+	<h1>JavaScript Console Methods</h1>
+	<ul>
+	
+<!--        1        -->
+
+<!-- Method:      console.assert(expression, message) 
+	 Description: Writes an error message to the console if the assertion is false. -->
+<!-- Examples -->
+		<li>
+			<em>console.assert(expression, message)</em> &nbsp Writes an error message to the console if the assertion is false.
+			<dt><br>Example:</dt>
+			<button onclick="console.assert(document.getElementById('demo'), 'You have no element with ID \'demo\'');">Assert-console</button>
+			
+			<!-- Aliter -->
+			<!--<script>
+				console.assert(document.getElementById("demo"), "You have no element with ID 'demo'");
+			</script>-->
+			
+			<dd><br>View in console or press F12 on your keyboard to view the message in the console view.</dd><br>
+		</li>
+
+<!--        2        -->
+
+<!-- Method:      console.clear() 
+	 Description: Clears the console. -->
+<!-- Examples -->
+		<li>
+			<em>console.clear()</em> &nbsp Clears the console.
+			<dt><br>Example: </dt>
+			<button onclick="console.clear()">Clear Console</button>
+			<dd><br>View in console or press F12 on your keyboard to view the message in the console view.</dd><br>
+		</li>
+
+<!--        3        -->
+
+<!-- Method:      console.count() 
+	 Description: Logs the number of times that this particular call to count() has been called. -->
+<!-- Examples -->
+		<li>
+			<em>console.count()</em> &nbsp Logs the number of times that this particular call to count() has been called.
+			<dt><br>Example:</dt>
+			<button onclick="for (i = 0; i < 10; i++) {console.count();}">Count-console</button>
+			
+			<!-- Aliter -->
+			<!--<script>
+				for (i = 0; i < 10; i++) {
+				  console.count();
+				}
+			</script>-->
+			
+			<dd><br>View in console or press F12 on your keyboard to view the message in the console view.</dd><br>
+		</li>
+
+<!--        4        -->
+
+<!-- Method:      console.error() 
+	 Description: Outputs an error message to the console. Can be placed in a condition block to test the code. -->
+<!-- Examples -->
+		<li>
+			<em>console.error()</em> &nbsp Outputs an error message to the console.
+			<dt><br>Example:</dt>
+			<button onclick="console.error('You made a mistake')">Error-console</button>
+			
+			<!-- Aliter -->
+			<!--<script>
+				console.error("You made a mistake");
+			</script>-->
+			
+			<dd><br>View in console or press F12 on your keyboard to view the message in the console view.</dd><br>
+		</li>
+	
+<!--        5        -->
+	
+<!-- Method:      console.log(message) 
+	 Description: Outputs a message to the console. -->
+<!-- Examples -->
+		<li>
+			<em>console.log(message)</em> &nbsp Outputs a message to the console.
+			<dt><br>Example:</dt>
+			<button onclick="console.log('Hello, World!')">Log-console</button>
+			
+			<!-- Aliter -->
+			<!--<script>
+				console.log("Hello, World!");
+			</script>-->
+			
+			<dd><br>View in console or press F12 on your keyboard to view the message in the console view.</dd><br>
+		</li>
+
+<!--        6        -->
+
+<!-- Method:      console.group() 
+	 Description: Creates a new inline group in the console. This indents following console messages by an additional level, until console.groupEnd() is called. -->
+<!-- Examples -->
+		<li>
+			<em>console.group() </em> &nbsp Creates a new inline group in the console. This indents following console messages by an additional level, until console.groupEnd() is called.
+			<dt><br>Example:</dt>
+			<button onclick="console.log('Hello world!');console.group();console.log('Hello again, this time inside a group!');console.groupEnd()">Group-console</button>
+			
+			<!-- Aliter -->
+			<!--<script>
+				console.log("Hello world!");
+				console.group();
+				console.log("Hello again, this time inside a group!");
+			</script>-->
+			
+			<dd><br>View in console or press F12 on your keyboard to view the message in the console view.</dd><br>
+		</li>
+
+<!--        7        -->
+		
+<!-- Method:      console.groupCollapsed() 
+	 Description: Creates a new inline group in the console. However, the new group is created collapsed. The user will need to use the disclosure button to expand it. -->
+<!-- Examples -->
+		<li>
+			<em>console.groupCollapsed()</em> &nbsp Creates a new inline group in the console. However, the new group is created collapsed. The user will need to use the disclosure button to expand it.
+			<dt><br>Example:</dt>
+			<button onclick="console.log('Hello world!');console.groupCollapsed();console.log('Hello again, this time inside a group!');console.groupEnd();">GroupCollapsed-console</button>
+			
+			<!-- Aliter -->
+			<!--<script>
+				console.log("Hello world!");
+				console.groupCollapsed();
+				console.log("Hello again, this time inside a collapsed group!");
+			</script>-->
+			
+			<dd><br>View in console or press F12 on your keyboard to view the message in the console view.</dd><br>
+		</li>
+	
+<!--        8        -->
+	
+<!-- Method:      console.groupEnd() 
+	 Description: Exits the current inline group in the console. -->
+<!-- Examples -->
+		<li>
+			<em>console.groupEnd())</em> &nbsp Exits the current inline group in the console.
+			<dt><br>Example:</dt>
+			<button onclick="console.log('Hello world!');console.group();console.log('Hello again, this time inside a group!');console.groupEnd();">GroupEnd-console</button>
+			
+			<!-- Aliter -->
+			<!--<script>
+				console.log("Hello world!");
+				console.group();
+				console.log("Hello again, this time inside a group!");
+				console.groupEnd();console.groupEnd();console.groupEnd();
+				console.log("And we are out of the group.");
+			</script>-->
+			
+			<dd><br>View in console or press F12 on your keyboard to view the message in the console view.</dd><br>
+		</li>
+	
+<!--        9        -->
+	
+<!-- Method:      console.info(message) 
+	 Description: Outputs an informational message to the console. -->
+<!-- Examples -->
+		<li>
+			<em>console.info(message)</em> &nbsp Outputs an informational message to the console.
+			<dt><br>Example:</dt>
+			<button onclick="console.info('Hello, World!');">Info-console</button>
+			
+			<!-- Aliter -->
+			<!--<script>
+				console.info("Hello world!");
+			</script>-->
+			
+			<dd><br>View in console or press F12 on your keyboard to view the message in the console view.</dd><br>
+		</li>
+
+<!--       10       -->
+		
+<!-- Method:      console.table(tabledata, tablecolumns) 
+	 Description: Displays tabular data as a table. -->
+<!-- Examples -->
+		<li>
+			<em>console.table(tabledata, tablecolumns)</em> &nbsp Displays tabular data as a table.
+			<dt><br>Example:</dt>
+			<button onclick="console.table(['Audi', 'Volvo', 'Ford']);">Table-console</button>
+			
+			<!-- Aliter -->
+			<!--<script>
+				console.table(["Audi", "Volvo", "Ford"]);
+			</script>-->
+			
+			<dd><br>View in console or press F12 on your keyboard to view the message in the console view.</dd><br>
+		</li>
+	
+<!--       11       -->
+	
+<!-- Method:      console.time() 
+	 Description: Starts a timer (can track how long an operation takes). -->
+<!-- Examples -->
+		<li>
+			<em>console.time()</em> &nbsp Starts a timer (can track how long an operation takes).
+			<dt><br>Example:</dt>
+			<button onclick="console.time();for (i = 0; i < 5000; i++) {var x = 1;}console.timeEnd()">Time-console</button>
+			
+			<!-- Aliter -->
+			<!--<script>
+				console.time();
+				for (i = 0; i < 5000; i++) {
+				  var x = 1;
+				}
+				console.timeEnd();=
+			</script>-->
+			
+			<dd><br>View in console or press F12 on your keyboard to view the message in the console view.</dd><br>
+		</li>
+	
+<!--       12       -->
+	
+<!-- Method:      console.timeEnd() 
+	 Description: Stops a timer that was previously started by console.time(). -->
+<!-- Examples -->
+		<li>
+			<em>console.timeEnd()</em> &nbsp Stops a timer that was previously started by console.time().
+			<dt><br>Example:</dt>
+			<button onclick="console.time();for (i = 0; i < 5000; i++) {var x = 1;}console.timeEnd()">TimeEnd-console</button>
+			
+			<!-- Aliter -->
+			<!--<script>
+				console.time();
+				for (i = 0; i < 100000; i++) {
+				  var x = 1;
+				}
+				console.timeEnd();
+			</script>-->
+			
+			<dd><br>View in console or press F12 on your keyboard to view the message in the console view.</dd><br>
+		</li>
+
+<!--       13       -->
+		
+<!-- Method:      console.trace() 
+	 Description: Outputs a stack trace to the console. -->
+<!-- Examples -->
+		<li>
+			<em>console.trace()</em> &nbsp Outputs a stack trace to the console.
+			<dt><br>Example:</dt>
+			<button onclick="console.trace()">Start Trace</button>
+			<dd><br>View in console or press F12 on your keyboard to view the message in the console view.</dd><br>
+		</li>
+
+<!--       14       -->
+
+<!-- Method:      console.warn(message) 
+	 Description: Outputs a warning message to the console. -->
+<!-- Examples -->
+		<li>
+			<em>console.warn(message)</em> &nbsp Outputs a warning message to the console.
+			<dt><br>Example:</dt>
+			<button onclick="console.warn('This is a warning!')">Warn-console</button>
+			
+			<!-- Aliter -->
+			<!--<script>
+				console.warn("This is a warning!");
+			</script>-->
+			
+			<dd><br>View in console or press F12 on your keyboard to view the message in the console view.</dd><br>
+		</li>
+	</ul>
+</body>
+</html>
