@@ -1,0 +1,48 @@
+<!-- Write a program to take marks as input from the user and grade himmm accordingly. 
+	 Use conditional statements. Also teh same code using switch or ternary. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var x = prompt("Enter marks");var result;
+    function check_even_or_odd(){
+      /*if(x >=70 ){
+        var result = "Marks are "+x+" and grade is A.";
+      }
+      else if(x >=50 && x< 70 ){
+        var result = "Marks are "+x+" and grade is B."
+      }
+	  else if(x >=30 && x< 50 ){
+        var result = "Marks are "+x+" and grade is C."
+      }
+	  else{
+		var result = "Marks are "+x+" and grade is D."
+	  }
+      */
+	  
+	  switch(parseInt(x/10)){
+		case 7:case 8:case 9:case 10:
+			var result = "Marks are "+x+" and grade is A.";
+			break;
+		case 6:case 5:
+			var result = "Marks are "+x+" and grade is B.";
+			break;
+		case 4:case 3:
+			var result = "Marks are "+x+" and grade is C.";
+		break;
+		default:
+			var result = "Marks are "+x+" and grade is D.";
+	  }
+	  /*(x>=70)?(result = "Marks are "+x+" and grade is A."):((x >=50 && x< 70)?(result = "Marks are "+x+" and grade is B."):((x >=30 && x< 50)?(result = "Marks are "+x+" and grade is C."):(result = "Marks are "+x+" and grade is D.")))*/
+		return result;
+	}
+    console.log(check_even_or_odd(x));
+    </script>
+</body>
+</html>
