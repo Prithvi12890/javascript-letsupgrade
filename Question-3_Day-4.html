@@ -1,0 +1,24 @@
+<!-- 3. Imagine you are going out to do some grocery shopping.
+		So you have an array called shoppingList with all the products you want to buy.
+		Now that you are inside the shop, you have a basket with all the products from your list,
+		but you want to add a few more. 
+		Create a new array called shoppingBasket, that will be a copy of shoppingList array, 
+		and add some new products into it. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+      let shoppingList = ['a','b','c','d','e'];
+      let shoppingBasket = [...shoppingList];
+      console.log(shoppingList);
+      shoppingBasket.push('f','g','h','i','j');
+      console.log(shoppingBasket);
+  </script>
+</body>
+</html>

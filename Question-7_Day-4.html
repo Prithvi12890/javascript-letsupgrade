@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var n = +prompt("Enter a number");
+		for(var j = 2;j<=n;j++){
+			for (var i=2;i<j;i++){
+				if(j%i==0){
+					var count=1;
+				}
+			}
+			if(count!=1){
+				console.log(j);
+			}
+			count = 0;
+		}
+		
+	</script>
+</body>
+</html>

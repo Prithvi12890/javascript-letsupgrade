@@ -1,0 +1,114 @@
+<!-- 4. Make a Calculator in Javascript which can do operations as Addition, Subraction,
+		Multiplication, Division, Square root, Percentage. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+	<style>
+		*{
+		  padding:0;
+		  margin:0;
+		}
+		td input{
+		  width:50px;
+		  height:50px;
+		  font-size:25px;
+		  margin:2px;
+		  cursor:pointer;
+		}
+		td{
+			opacity:0.5;
+		}
+		td:hover{
+			opacity:1;
+		}
+		.output{
+		  width:203px;
+		  margin:5px;
+		  font-size:25px;
+		  padding:5px;
+		}
+		.main{
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+		}
+		.bg{
+			background: -webkit-linear-gradient(left,red, blue);height:100vh;
+		}
+	</style>
+	<script>
+		var last='0';
+		function insert(num){
+		if(num == '/' ||num == '*' ||num == '+' ||num == '-' ||num == '%'){
+				if(num==last){
+					num = "";
+				}
+			}
+		document.getElementById('output').value += num ;
+		last = num;
+		}
+		function equal(){
+		  var exp = document.getElementById('output').value;
+		  if(exp){
+			document.getElementById('output').value = eval(document.getElementById('output').value);
+		  }
+		}
+		function c(){
+		  document.getElementById('output').value= ""; console.log(document.getElementById('output').value);
+		}
+		function sqrt(){
+			var x = eval(document.getElementById('output').value)
+			document.getElementById('output').value = Math.sqrt(x);
+		}
+		function back(){
+			var k = document.getElementById('output').value;
+			document.getElementById('output').value = k.slice(0,((k.length)-1));
+		}
+	</script>
+<body>
+	<div class="bg"></div>
+	<div class="main">
+	  <form name="form">
+	    <input class="output" id='output'>
+	  </form>
+    <table>
+      <tr>
+        <td><input type='button' value='C' onclick="c()"></td>
+		<td><input type='button' value='<' onclick="back()"></td>
+        <td><input type='button'value='/' onclick="insert('/')"></td>
+         <td><input type='button'value='x' onclick="insert('*')"></td>
+      </tr>
+     <tr>
+        <td><input type='button' value='7' onclick='insert(7)'></td>
+        <td><input type='button' value='8' onclick='insert(8)'></td>
+        <td><input type='button'value='9' onclick='insert(9)'></td>
+         <td><input type='button'value='-' onclick="insert('-')"></td>
+      </tr>
+      <tr>
+        <td><input type='button' value='4' onclick='insert(4)'></td>
+        <td><input type='button' value='5' onclick='insert(5)'></td>
+        <td><input type='button'value='6' onclick='insert(6)'></td>
+         <td><input type='button'value='+' onclick="insert('+')"></td>
+      </tr>
+      <tr>
+        <td><input type='button' value='1' onclick='insert(1)'></td>
+        <td><input type='button' value='2' onclick='insert(2)'></td>
+        <td><input type='button'value='3' onclick='insert(3)'></td>
+		<td><input type='button' value='.' onclick="insert('.')"></td>
+      </tr>
+	  <tr>
+		<td><input type='button' value='%' onclick="insert('/100')"></td>
+		<td><input type='button' value='0' onclick="insert('0')"></td>
+		<td><input type='button' value='sqrt' onclick="sqrt()"></td>
+		<td><input type='button'value='=' onclick="equal()"></td>
+		
+	  </tr>
+    </table>
+	</div>
+</body>
+</html>
