@@ -1,0 +1,47 @@
+<!-- 1. Write a program which does the following things:
+		a. Takes a positive number from the user.
+		b. Makes an array of numbers till the number given by user.
+		c. Use higher order function to filter the odd numbers.
+		d. Generate an array of cubes of the filtered numbers. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Question-1_Day-5</title>
+	<style>
+		#question{
+			background-color:gray;
+			color:#ffffff;
+			padding:10px;
+			font-size:20px;
+			width:50%;
+			margin-left:auto;
+			margin-right:auto;
+		}
+	</style>
+</head>
+<body>
+	<p id="question">
+		Question :<br><br> Write a program which does the following things:<br>
+		a. Takes a positive number from the user.<br>
+		b. Makes an array of numbers till the number given by user.<br>
+		c. Use higher order function to filter the odd numbers.<br>
+		d. Generate an array of cubes of the filtered numbers.
+	</p>
+	<script>
+		var x = 1,num = [];
+		while(x!=null){
+			x = prompt("Enter a positive number");
+			if(x>0 && x!=null){
+				num.push(x);
+			}
+		}
+		 console.log("Positive numbers out of user given numbers \n");console.log(num);
+		let numOdd = num.filter((num) => num%2==1);
+		 console.log("Odd numbers out of user given numbers \n");console.log(numOdd);
+		let cubes = numOdd.map(num => num**3);
+		console.log("Cubes of these odd numbers \n");console.log(cubes);
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!-- 3. Using promises / async await / fetch get the random todos from json placeholder api.
+		And log all the completed todos to the console. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Question-3_Day-5</title>
+	<style>
+		#question{
+			background-color:gray;
+			color:#ffffff;
+			padding:10px;
+			font-size:20px;
+			width:50%;
+			margin-left:auto;
+			margin-right:auto;
+		}
+	</style>
+</head>
+<body>
+	<p id="question">
+		Question : <br><br>Using promises / async await / fetch get the random todos from json placeholder api. And log all the completed todos to the console.
+	</p>
+	<script>
+		// https://jsonplaceholder.typicode.com/todos
+		fetch('https://jsonplaceholder.typicode.com/todos')
+		.then(response=>response.json())
+		.then(data=>{
+			for(var data1 of data){
+				if(data1["completed"]){
+					console.log(data1);
+				}
+			}
+		})
+	</script>
+	
+</body>
+</html>
