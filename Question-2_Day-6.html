@@ -1,0 +1,46 @@
+<!-- 2. Write a program that will display the multiplication table on the webpage in a proper format.
+		Take input from the user.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Question-2_Day-6</title>
+	<style>
+		#question{
+			background-color:gray;
+			color:#ffffff;
+			padding:10px;
+			font-size:20px;
+			width:50%;
+			margin-left:auto;
+			margin-right:auto;
+		}
+		#table{
+			background-color:linen;
+			color:#000000;
+			padding:10px;
+			font-size:20px;
+			text-align:center;
+			width:50%;
+			margin-left:auto;
+			margin-right:auto;
+		}
+	</style>
+</head>
+<body>
+	<p id="question">
+		Question :<br><br> Write a program that will display the multiplication table on the webpage in a proper format.
+	<br><br>Take input from the user.
+	</p>
+	<p id="table"></p>
+	<script>
+		var txt = "";
+		var x = prompt("Enter a number to get its table");
+		for (var i=0;i<10;i++){
+			txt += x +" x "+ (i+1) + " = " + (x*(i+1)) + "<br>";
+		}
+		document.querySelector('#table').innerHTML = txt;
+	</script>
+</body>
+</html>
