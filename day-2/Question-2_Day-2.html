@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>String and Array methods</h1>
+    <h2>String methods</h2>
+    <ul>
+        <li>
+            <dt>search(content)</dt>
+            <dd><br>The search(content) method searches a string for a specified value and returns the position of the first match. <br><br>Example:<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var str = "Please locate where 'locate' occurs!";<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var pos = str.search("locate");<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(pos);<br><br><button onclick="var str = 'Please locate where \'locate\' occurs!';
+            var pos = str.search('locate');console.log(pos);">Click to run</button><br><br></dd>
+        </li>
+        <li>
+            <dt>slice(start,end)</dt>
+            <dd><br>slice() extracts a part of a string and returns the extracted part in a new string.
+            <br>
+            The method takes 2 parameters: the start position, and the end position (end not included). <br><br>Example: <br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var str = "Apple, Banana, Kiwi"; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var res = str.slice(7, 13); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(res); <br><br> <button onclick="var str = 'Apple, Banana, Kiwi';
+            var res = str.slice(7, 13);console.log(res);">Click to run</button><br><br></dd>
+        </li>
+        <li>
+            <dt>substring(start,end)</dt>
+            <dd><br>substring() is similar to slice().
+            <br>
+            The difference is that substring() cannot accept negative indexes. <br><br>Example: <br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var str = "Apple, Banana, Kiwi"; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var res = str.substring(7, 13); <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(res); <br><br><button onclick="var str = 'Apple, Banana, Kiwi';
+            var res = str.substring(7, 13);console.log(res);">Click to run</button><br><br></dd>
+        </li>
+        <li>
+            <dt>substr(start,lenght)</dt>
+            <dd><br>substr() is similar to slice().
+            <br>
+            The difference is that the second parameter specifies the length of the extracted part. <br><br>Example:<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var str = "Apple, Banana, Kiwi";<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var res = str.substr(7, 6); <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(res) <br><br><button onclick="var str = 'Apple, Banana, Kiwi';
+            var res = str.substr(7, 6);console.log(res);">Click to run </button><br><br></dd>
+        </li>
+        <li>
+            <dt>replace(word,it's substitute)</dt>
+            <dd><br>The replace() method replaces a specified value with another value in a string (only the first value).
+            <br><br>Example:<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;str = "Please visit Microsoft!";
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var n = str.replace("Microsoft", "Google");
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(n);
+            <br>
+            <br><button onclick="str = 'Please visit Microsoft!';
+            var n = str.replace('Microsoft', 'Google');console.log(n);">Click to run </button><br><br>
+            </dd>
+        </li>
+        <li>
+            <dt>trim()</dt>
+            <dd><br>The trim() method removes whitespace from both sides of a string
+            <br><br>Example:<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'       Hello World!        ';
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(str.trim());
+            <br>
+            <br><button onclick="var str = '       Hello World!        ';
+            alert(str.trim());">Click to run </button><br><br>
+            </dd>
+        </li>
+        <li>
+            <dt>charCodeAt(position)</dt>
+            <dd><br>The charCodeAt() method returns the unicode of the character at a specified index in a string
+            <br>
+            <br><br>Example:<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var str = "HELLO WORLD";
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(str.charCodeAt(0));
+            <br>
+            <br><button onclick="var str = 'HELLO WORLD';
+            console.log(str.charCodeAt(0));">Click to run </button><br><br>
+            </dd>
+        </li>
+    </ul>
+    <h2>Array methods</h2>
+    <ul>
+        <li>
+            <dt>toString()</dt>
+            <dd><br>The JavaScript method toString() converts an array to a string of (comma separated) array values.
+        
+            <br><br>Example:<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(fruits.toString());
+            <br>
+            <br><button onclick="var fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+            console.log(fruits.toString());">Click to run </button><br><br>
+            </dd>
+        </li>
+        <li>
+            <dt>delete</dt>
+            <dd><br>Since JavaScript arrays are objects, elements can be deleted by using the JavaScript operator delete.
+                <br>Using delete may leave undefined holes in the array. Use pop() or shift() instead.
+                <br><br>Example:<br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var fruits = ["Banana", "Orange", "Apple", "Mango"]; 
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete fruits[0]; 
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(fruits);
+                <br>
+                <br><button onclick='var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                delete fruits[0];console.log(fruits)'>Click to run </button><br><br>
+            </dd>
+        </li>
+        <li>
+            <dt>splice()</dt>
+            <dd><br>The splice() method can be used to add new items to an array.
+                <br>The first parameter defines the position where new elements should be added (spliced in).
+
+                The second parameter defines how many elements should be removed.
+                <br>
+                The rest of the parameters define the new elements to be added.
+                <br><br>Example:<br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fruits.splice(2, 0, "Lemon", "Kiwi");
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(fruits);
+                <br>
+                <br><button onclick='var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                fruits.splice(2, 0, "Lemon", "Kiwi");console.log(fruits);'>Click to run </button><br><br>
+            </dd>
+        </li>
+        <li>
+            <dt>slice()</dt>
+            <dd><br>The slice() method slices out a piece of an array into a new array.
+                <br><br>Example:<br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var citrus = fruits.slice(1);
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(citrus);
+                <br>
+                <br><button onclick='var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+                var citrus = fruits.slice(1);console.log(citrus);'>Click to run </button><br><br>
+            </dd>
+        </li>
+    </ul>
+</body>
+</html>
