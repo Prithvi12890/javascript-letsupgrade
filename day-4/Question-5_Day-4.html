@@ -1,0 +1,27 @@
+<!-- 5. Log the total commission earned. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+	var x = +prompt("Enter sales made by you");
+	if (x>0 && x<=5000){
+		console.log(`You have earned ${x + (x*0.02)} total commission.`);
+	}
+	else if (x>0 && x<=5000){
+		console.log(`You have earned ${x + (x*0.05)} total commission.`);
+	}
+	else if (x>0 && x<=5000){
+		console.log(`You have earned ${x + (x*0.07)} total commission.`);
+	}
+	else{
+		console.log(`You have earned ${x + (x*0.1)} total commission.`);
+	}
+  </script>
+</body>
+</html>
