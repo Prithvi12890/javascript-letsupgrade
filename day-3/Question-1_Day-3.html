@@ -1,0 +1,26 @@
+<!-- Take a number from a user and write a function which checks whether the number is even or odd.
+	 Assign the result to a variable and log that variable in the console.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var x = prompt("Enter a number");
+    function check_even_or_odd(){
+      if(x%2==0){
+        var result = "The number entered is "+x+" and Number is even.";
+      }
+      else{
+        var result = "The number entered is "+x+" and Number is odd."
+      }
+      return result;
+    }
+    console.log(check_even_or_odd(x));
+    </script>
+</body>
+</html>
