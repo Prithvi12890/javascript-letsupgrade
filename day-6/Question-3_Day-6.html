@@ -1,0 +1,80 @@
+<!-- 3. Make a webpage that will ask the name of the user. Then will display a welcome message on 
+		the webpage. also the webpage should have a clock. 
+		Using the toggle method of classList add a dark mode feature to the website. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Question-3_Day-6</title>
+	<style>
+		#question{
+			background-color:gray;
+			color:#ffffff;
+			padding:10px;
+			font-size:20px;
+			width:50%;
+			margin-left:auto;
+			margin-right:auto;
+		}
+		#welcome{
+			background-color:linen;
+			color:#000000;
+			padding:10px;
+			font-size:24px;
+			text-align:center;
+			width:50%;
+			margin-left:auto;
+			margin-right:auto;
+		}
+		.darkMode{
+			background-color:black;
+			color:white;
+		}
+		#btn{
+			padding:10px;
+			border-radius:3px;
+		}
+		.btn_light{
+			background-color:black;
+			color:white;
+		}
+		.btn_dark{
+			background-color:white;
+			color:black;
+		}
+	</style>
+</head>
+<body>
+	<p id="clock"></p>
+	<p id="question">
+		Question :<br><br> Make a webpage that will ask the name of the user. Then will display a welcome message on 
+		the webpage. Also the webpage should have a clock. 
+		<br><br>Using the toggle method of classList add a dark mode feature to the website.
+	</p>
+	<p id='welcome'></p>
+	<button class="btn_light" id="btn" onclick="darkMode()">Switch to Dark Mode</button>
+	<script>
+		let time = document.getElementById('clock');
+    let clock = ()=> {
+      var date = new Date();
+      var tim = date.toLocaleTimeString();
+      time.innerText = tim;
+    };
+    setInterval(clock,1000)
+    clock();
+		var name = prompt("Enter your name","Anonymous");
+		document.querySelector('#welcome').innerText = "Welcome "+name;
+		function darkMode(){
+			document.body.classList.toggle('darkMode');
+			document.querySelector('button').classList.toggle('btn_dark');
+			if(document.body.className == 'darkMode'){
+				document.querySelector('button').innerText = 'Switch to Light Mode';
+			}
+			else{
+				document.querySelector('button').innerText = 'Switch to Dark Mode';
+			}
+		}
+	</script>
+</body>
+</html>
