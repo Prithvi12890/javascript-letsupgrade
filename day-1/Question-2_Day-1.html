@@ -1,0 +1,111 @@
+<!-- 2. Write the difference between var, let and const with code examples -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JavaScript var let and const</title>
+</head>
+<body>
+	<h1>Difference between var, let and const</h1>
+	<p>Outputs can be seen in console (press F12).</p>
+	<p>Example 1: </p>
+	<p>
+		&nbsp &nbsp &nbsp &nbsp for (var i = 0; i < 3; i++) { <br>
+		&nbsp &nbsp &nbsp &nbsp   console.log(i);<br>
+		&nbsp &nbsp &nbsp &nbsp }<br>
+
+		&nbsp &nbsp &nbsp &nbsp console.log(i);
+	</p>
+	<button onclick="for (var i = 0; i < 3; i++) {console.log(i);}console.log(i)">Click to run</button>
+	<p>Inference: The variable i is accessible outside of the for-loop. <br>This is expected since variables defined with var are only inaccessible outside of a function definition.</p>
+	
+	<br>
+	
+	<p>Example 2: </p>
+	<p>
+		&nbsp &nbsp &nbsp &nbsp var foo = 1;<br>
+		&nbsp &nbsp &nbsp &nbsp foo = 30;<br>
+		&nbsp &nbsp &nbsp &nbsp var foo = 101;<br>
+		&nbsp &nbsp &nbsp &nbsp console.log(foo);
+	</p>
+	<button onclick="var foo = 1;foo = 30;var foo = 101;console.log(foo)">Click to run</button>
+	<p>Inference: Using var you can reassign it with a new value.</p>
+	
+	<br>
+	
+	<p>Example 3: </p>
+	<p>
+		&nbsp &nbsp &nbsp &nbsp for (let i = 0; i < 3; i++) {<br>
+		&nbsp &nbsp &nbsp &nbsp   console.log(i);<br>
+		&nbsp &nbsp &nbsp &nbsp }<br>
+		&nbsp &nbsp &nbsp &nbsp console.log(i);
+	</p>
+	<button onclick="for (let i = 0; i < 3; i++) {console.log(i);}console.log(i)">Click to run</button>
+	<p>Inference: let creates a variable which is available only inside the block in which it is defined.</p>
+	
+	<br>
+	
+	<p>Example 4: </p>
+	<p>
+		&nbsp &nbsp &nbsp &nbsp let foo = 1;<br>
+		&nbsp &nbsp &nbsp &nbsp foo = 30;<br>
+	    &nbsp &nbsp &nbsp &nbsp // let foo = 101;    ️ // can't use "let" keyword again<br>
+	    &nbsp &nbsp &nbsp &nbsp foo = 101;<br>
+        &nbsp &nbsp &nbsp &nbsp console.log(foo);  
+	</p>
+	<button onclick="let foo = 1;foo = 30;foo = 101;console.log(foo)">Click to run</button>
+	<p>Inference: let creates a variable which is available only inside the block in which it is defined.</p>
+	
+	<br>
+	
+	<p>Example 5: </p>
+	<p>
+		&nbsp &nbsp &nbsp &nbsp const myBoolean = true;<br>
+		&nbsp &nbsp &nbsp &nbsp if (myBoolean) {<br>
+		&nbsp &nbsp &nbsp &nbsp   const turtles = [<br>
+		&nbsp &nbsp &nbsp &nbsp 	'leonardo',<br>
+		&nbsp &nbsp &nbsp &nbsp 	'donatello',<br>
+		&nbsp &nbsp &nbsp &nbsp 	'michaelangelo',<br>
+		&nbsp &nbsp &nbsp &nbsp 	'raphael'<br>
+		&nbsp &nbsp &nbsp &nbsp   ];<br>
+		&nbsp &nbsp &nbsp &nbsp   // turtles = turtles.concat('Shredder');  // this would throw an error<br>
+		&nbsp &nbsp &nbsp &nbsp   console.log(turtles);<br>
+		&nbsp &nbsp &nbsp &nbsp }<br>
+		&nbsp &nbsp &nbsp &nbsp console.log(turtles);  
+	</p>
+	<button onclick="const myBoolean = true;if (myBoolean) {const turtles = ['leonardo','donatello','michaelangelo','raphael'];console.log(turtles);}console.log(turtles)">Click to run</button>
+	<p>Inference: Items can still be added to a const variable that points to an array or an object, because the const is not being reassigned in such case.<br> It is available only in the block in which it is defined.</p>
+
+	<br>
+	
+	<table>
+		<tr>
+			<th>Keyword &nbsp &nbsp &nbsp &nbsp &nbsp </th>
+			<th>Scope &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </th>
+			<th>Redefinable? &nbsp &nbsp  </th>
+		</tr>
+		
+		<tr>
+			<td>var</td>
+			<td>function-scope</td>
+			<td>Yes</td>
+		</tr>
+		
+		<tr>
+			<td>let</td>
+			<td>block-scope</td>
+			<td>Yes</td>
+		</tr>
+		
+		<tr>
+			<td>const</td>
+			<td>block-scope</td>
+			<td>No</td>
+		</tr>
+	</table>
+	<p>Function-scope: Available through out the function.</p>
+	<p>Block-scope: Available only within the block in which it is defined.</p>
+</body>
+</html>
